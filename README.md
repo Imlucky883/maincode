@@ -47,7 +47,10 @@ sudo systemctl enable docker
 # Add the current user to the docker group
 sudo usermod -aG docker $USER
 ```
-6. Install the **Docker Pipeline** Plugin from `Manage jenkins > Plugins > Available Plugins`
+6. Install the **below Jenkins Plugins**  from `Manage jenkins > Plugins > Available Plugins`
+* Docker
+* Docker Pipeline
+* GitHub Integration
 7. Add Github and DockerHub credentials which will be used for the authentication purpose.
 ![Screenshot (59)](https://user-images.githubusercontent.com/88871793/210787897-9c7233ec-a740-4138-aae5-ca982bb8f1f1.png)
 
