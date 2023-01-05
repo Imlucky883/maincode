@@ -1,5 +1,6 @@
 <h1>CI CD Pipeline using Jenkins and GitOps(ArgoCD) to dockerize Python application and deploy the container into a Kubernetes cluster.</h1>
 This project demonstrates how to set up a CI/CD pipeline using Jenkins and GitOps (ArgoCD) to dockerize your code, and deploy the container into a Kubernetes cluster. The Jenkins server is used to automate the build and test phases of the CI/CD pipeline, while ArgoCD is used to deploy the containerized application to the Kubernetes cluster. This allows for efficient and automated delivery of code changes, ensuring that the application is always up-to-date and running smoothly.
+
 <h2>WorkFlow(Architecture)</h2>
 
 ![Screenshot (57)](https://user-images.githubusercontent.com/88871793/210801745-312e6b79-691e-4065-86fd-281effd030ee.png)
@@ -68,7 +69,8 @@ There are 3 ways to create a EKS cluster
 2. Using eksctl
 3. Using IaC tool like Terraform
 <p> We will be using `eksctl` to provision our cluster. It is the easiest way to setup a cluster with just one command. </p>
-> NOTE : You need to have **kubectl** installed on your Local system.
+
+>  **NOTE** : You need to have **kubectl** installed on your Local system. It may take around 20 minutes for the cluster to setup.
 
 ```Bash
 #Installing eksctl
@@ -85,6 +87,7 @@ kubectl port-forward svc\/argocd-server -n argocd 8080:443
 
 The API server can then be accessed using the `localhost:8080`
 
+> **NOTE** : In the last stage of Jenkinsfile, the build job name should be same as that of the second job which will be triggered once the image is pushed to DockerHub. This repo is associated with https://github.com/Imlucky886/manifestcode which has the Jenkinsfile for Jenkins Job 2.
 <h2> Output </h2>
 
 ![Screenshot (60)](https://user-images.githubusercontent.com/88871793/210800293-41e50057-cf78-4db4-8f36-409a42e4b9e0.png)
