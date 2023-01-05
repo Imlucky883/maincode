@@ -1,3 +1,5 @@
+**_Project Source_** : https://github.com/saha-rajdeep/kubernetescode
+
 <h1>CI CD Pipeline using Jenkins and GitOps(ArgoCD) to dockerize Python application and deploy the container into a Kubernetes cluster.</h1>
 This project demonstrates how to set up a CI/CD pipeline using Jenkins and GitOps (ArgoCD) to dockerize your code, and deploy the container into a Kubernetes cluster. The Jenkins server is used to automate the build and test phases of the CI/CD pipeline, while ArgoCD is used to deploy the containerized application to the Kubernetes cluster. This allows for efficient and automated delivery of code changes, ensuring that the application is always up-to-date and running smoothly.
 
@@ -97,5 +99,5 @@ The API server can then be accessed using the `localhost:8080`
 
 ![Screenshot (64)](https://user-images.githubusercontent.com/88871793/210799731-4cb01ae7-a226-4e90-94e4-17c8c05879a4.png)
 
-![Screenshot (63)](https://user-images.githubusercontent.com/88871793/210799885-5974af28-d94f-4d85-9b23-cc947ad62ffe.png)
-
+<h1> Credits </h1>
+https://youtu.be/o4QG_kqYvHk
